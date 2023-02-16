@@ -1,4 +1,4 @@
 # project-E-commerce
-project-react-pilares_for-Labenu
+Project React Pilars for-Labenu
 
 Deploy: https://wuju-e-commerce.vercel.app
