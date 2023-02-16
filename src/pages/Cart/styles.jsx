@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+const OPACIDADE_ZERO = 0;
+const OPACIDADE_UM = 0;
+
 export const CartArea = styled.div`
     margin-top: 14vh;
     overflow-y: scroll;
@@ -31,9 +34,10 @@ export const CardContainerCart = styled.div`
     align-items: center;
     transform: scale(1.12);
     width: 65%;
-    .empty {
-       opacity: ${(props)=> props.length? 1 : 0 };
-    }
+`
+
+export const EmptyText = styled.span`
+    opacity: ${(props)=> props.productCart.length? 0 : 1 };
 `
 
 export const CartTitleMain = styled.h2`

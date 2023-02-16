@@ -7,24 +7,36 @@ import wujuLogo from './assets/logoujutext.png'
 import { GlobalStyle } from './GlobalStyle'
 import { Footer } from './components/Footer/Footer'
 import { Cart } from './pages/Cart/Cart'
+import { BookTrip } from './pages/BookTrip/BookTrip'
 
 
 function App() {
   const [pageRoute, setPageRoute] = useState(0)
-  const [cartProducts, setCartProducts] = useState([destinations[0]])
+  const [productCart, setProductCart] = useState([destinations[0]])
   const [dateDeparture,setDateDeparture] = useState()
   const [dateReturn,setDateReturn] = useState()
   const [date,setDate] = useState()
   const [alert,setAlert] = useState()
-  const [destination,setDestination] = useState()
   const [person,setPerson] = useState()
+  const [filterBookDestination, setFilterBookDestination] = useState()
+  const [destinationSearch,setDestinationSearch] = useState()
+  const [minPriceSearch, setMinPriceSearch] = useState()
+  const [maxPriceSearch, setMaxPriceSearch] = useState()
+  const [universeSearch, setUniverseSearch] = useState()
+  const [order, setOrder] = useState()
   
+
+  const nameToBook = (product) => {
+    const destinationToBook = product.name
+    setFilterBookDestination(destinationToBook);
+}
+
     const renderScreen = () => {
       let page 
         switch (pageRoute) {
           case 0:
             page = <Homepage className="MainContenteClass"
-            product={destinations} 
+            products={destinations} 
             dateDeparture ={dateDeparture}
             dateReturn={dateReturn}
             setDateDeparture={setDateDeparture}
@@ -33,15 +45,16 @@ function App() {
             setDate={setDate}
             alert={alert}
             setAlert={setAlert}
-            destination={destination}
-            setDestination={setDestination}
             person={person}
             setPerson={setPerson}
+            filterBookDestination={filterBookDestination}
+            setFilterBookDestination={setFilterBookDestination}
+            nameToBook={nameToBook}
             />
             break
           case 1:
             page = <Catalogue className="MainContenteClass" 
-            product={destinations} 
+            products={destinations} 
             dateDeparture ={dateDeparture}
             dateReturn={dateReturn}
             setDateDeparture={setDateDeparture}
@@ -50,13 +63,28 @@ function App() {
             setDate={setDate}
             alert={alert}
             setAlert={setAlert}
-            destination={destination}
-            setDestination={setDestination}
+            destinationSearch={destinationSearch}
+            setDestinationSearch={setDestinationSearch}
             person={person}
-            setPerson={setPerson}/>
+            setPerson={setPerson}
+            filterBookDestination={filterBookDestination}
+            setFilterBookDestination={setFilterBookDestination}
+            nameToBook={nameToBook}
+            minPriceSearch={minPriceSearch}
+            setMinPriceSearch={setMinPriceSearch}
+            maxPriceSearch={maxPriceSearch}
+            setMaxPriceSearch={setMaxPriceSearch}
+            universeSearch={universeSearch}
+            setUniverseSearch={setUniverseSearch}
+            order={order}
+            setOrder={setOrder}
+            />
             break
           case 2:
-            page = <Cart className="cartTab"cartProduct={cartProducts}/>
+            page = <Cart productCart={productCart}/>
+            break
+          case 3:
+            page = <BookTrip productCart={productCart}/>
             break
           default: 
             alert("Page not found")
@@ -67,13 +95,9 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle/>
-      <Header className="HeaderClass" logo={wujuLogo} setPageRoute={setPageRoute} productCart={cartProducts} />
-      {/* <Cart cartProduct={cartProducts}/> */}
+      <Header logo={wujuLogo} setPageRoute={setPageRoute} productCart={productCart} />
       {renderScreen()}
-      {/* <Homepage product={destinations}/>
-      <Catalogue product={destinations}/>
-      <Cart product={destinations}/> */}
-      <Footer className="FooterClass" />
+      <Footer />
     </div>
   )
 }

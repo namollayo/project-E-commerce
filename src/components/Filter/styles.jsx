@@ -99,10 +99,22 @@ export const FiltroCatalogueContainer = styled.div`
     padding: 1rem;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
     justify-content: flex-start;
     align-items: center;
     align-content: flex-start;
     gap:0.75rem;
+        .alert{
+        color: var(--white-card);
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        position: absolute;
+        bottom:2rem;
+        right:20rem;
+        :hover {
+            color: var(--white-card);
+        }
+    }
         `
 export const CatalogueStyledInput = styled.input`
     width: 30%;
@@ -130,6 +142,7 @@ export const CatalogueStyledInputDestination = styled.select`
     :focus{
         outline:none;
     }
+    
 
 `
 export const CatalogueStyledInputPerson = styled.input`

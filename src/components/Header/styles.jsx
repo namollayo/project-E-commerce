@@ -48,13 +48,10 @@ export const CartIcon = styled.div `
 `
 
 export const SpanCart = styled.span`
-        opacity: ${(props)=> props.productCart.length ? 1 : 0 };
-        text-align: center;
-        margin-left: 0.3rem;
-        background-color: rgba(232, 122, 161, 0.60);
-        width:1.5rem;
-        border-radius: 100%;
-`
-export const CartImage = styled.img`
-        
+    opacity: ${(props)=> props.productCart.length ? 1 : 0 };
+    text-align: center;
+    margin-left: 0.3rem;
+    background-color: rgba(232, 122, 161, 0.60);
+    width:1.5rem;
+    border-radius: 100%;
 `

@@ -8,8 +8,4 @@ export const CatalogueContainer = styled.main `
     padding: 3rem 1.25rem;
     min-height: 70vh;
     gap:2.5rem;
-
-    .empty {
-       opacity: ${(props)=> props.length? 1 : 0 };
-    }
 `
