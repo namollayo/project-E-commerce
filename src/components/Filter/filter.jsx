@@ -1,28 +1,33 @@
 import { FiltroHomeContainer, FiltroCatalogueContainer, StyledInputDestination, StyledInputPerson, StyledInput, StyledSearchButton, CatalogueStyledInputDestination, CatalogueStyledInputPerson, CatalogueStyledInput, CatalogueStyledSearchButton } from './styles'
 import { useState } from 'react'
+import { checkDates } from '../../utils/RoutesFunctions'
 
 
 export function FilterHome(props){
-    const { product, dateDeparture, dateReturn, setDateReturn, date, setDate, alert, setAlert, setDateDeparture, destination,setDestination,person,setPerson } = props
-    const checkDates = () => {
-        const data1 = new Date(dateDeparture)
-        const data2 = new Date(dateReturn)
-        if(data1 <= data2){
-            setAlert("")
-        
-        }
-        else {
-            setAlert("Please enter a valid date")
-        }
-    }
-
+    const {
+      products,
+      dateDeparture,
+      dateReturn,
+      setDateReturn,
+      date,
+      setDate,
+      alert,
+      setAlert,
+      setDateDeparture,
+      person,
+      setPerson,
+      filterBookDestination,
+      setFilterBookDestination,
+    } = props;
+    
+    
 
     return(
-    <>
+   
     <FiltroHomeContainer>
-            <StyledInputDestination id="Destination" placeholder='Destination' onChange={(e)=>{ setDestination(e.target.value)}}>
+            <StyledInputDestination value={filterBookDestination} id="Destination" placeholder='Destination' onChange={(e)=>{setFilterBookDestination(e.target.value)}}>
             <option>Destination</option>
-            {product.map((product) => {
+            {products.map((product) => {
                 return (
             <option key={product.id} value={product.name}>
               {product.name}
@@ -30,25 +35,42 @@ export function FilterHome(props){
           );
            })}
            </StyledInputDestination>
-            <StyledInput id="DepartureDate" type="date" onChange={(e)=>{ setDateDeparture(e.target.value)}}/>
+            <StyledInput id="DepartureDate" type="date" onChange={(e)=>{if(alert){setAlert("")};setDateDeparture(e.target.value)}}/>
             <StyledInputPerson id="Passengers" placeholder='Nº of Passengers' type="number" onChange={(e)=>{ setPerson(e.target.value)}} />
-            <StyledInput id="ReturnDate" type="date" onChange={(e)=>{ setDateReturn(e.target.value)}}/> <br/>
+            <StyledInput id="ReturnDate" type="date" onChange={(e)=>{if(alert){setAlert("")};setDateReturn(e.target.value)}}/> <br/>
             <p className="alert">{alert}</p>
-        <StyledSearchButton onClick={checkDates}>SEARCH</StyledSearchButton>
+        <StyledSearchButton onClick={()=>{checkDates(dateDeparture,dateReturn,setAlert)}}>SEARCH</StyledSearchButton>
     </FiltroHomeContainer>
-    </>
+ 
 
     )}
 
     export function FilterCatalogue(props){
-        const {product, dateDeparture, dateReturn, setDateReturn, date, setDate, alert, setAlert, setDateDeparture, destination,setDestination,person,setPerson} = props
+        const {
+          products,
+          dateDeparture,
+          dateReturn,
+          setDateReturn,
+          date,
+          setDate,
+          alert,
+          setAlert,
+          filterBookDestination,
+          setDateDeparture,
+          destination,
+          setDestination,
+          person,
+          setPerson,
+          setFilterBookDestination,
+        } = props;
+        
 
         return(
             <>
             <FiltroCatalogueContainer>
-            <CatalogueStyledInputDestination id="Destination" placeholder='Destination' onChange={(e)=>{ setDestination(e.target.value)}}>
-            <option>Destination</option>
-            {product.map((product) => {
+            <CatalogueStyledInputDestination value={filterBookDestination} id="Destination"  placeholder='Destination' onChange={(e)=>{ setFilterBookDestination(e.target.value)}}>
+            <option value="">Destination</option>
+            {products.map((product) => {
                 return (
             <option key={product.id} value={product.name}>
               {product.name}
@@ -59,7 +81,8 @@ export function FilterHome(props){
                     <CatalogueStyledInputPerson id="Passengers" placeholder='Nº of Passengers' type="number" onChange={(e)=>{ setPerson(e.target.value)}} />
                     <CatalogueStyledInput id="DepartureDate" type="date" onChange={(e)=>{ setDateDeparture(e.target.value)}} />
                     <CatalogueStyledInput id="ReturnDate" type="date" onChange={(e)=>{ setDateReturn(e.target.value)}}/>         
-                    <CatalogueStyledSearchButton>SEARCH</CatalogueStyledSearchButton>
+                    <p className="alert">{alert}</p>
+                    <CatalogueStyledSearchButton onClick={()=>{checkDates(dateDeparture,dateReturn,setAlert)}}>SEARCH</CatalogueStyledSearchButton>
             </FiltroCatalogueContainer>
             </>
         

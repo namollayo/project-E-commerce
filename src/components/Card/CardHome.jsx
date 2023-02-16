@@ -1,16 +1,17 @@
-import { CardArea, CardImage, CardTitle, ButtonCardHome, CardContent, } from './stylesHome'
+import { CardArea, CardImage, CardTitle, ButtonCardHome, CardContent } from './stylesHome'
 
-export function CardHome({product}){
+export function CardHome({products, nameToBook}){
+    
     return(
-        <CardArea>
-            <CardImage src={product.img} alt={product.name}/>
+    <CardArea>
+            <CardImage src={products.img} alt={products.name}/>
             <CardContent>
                 <div>
-                    <CardTitle> {product.name}</CardTitle>
-                    <ButtonCardHome>Book Now</ButtonCardHome>
+                    <CardTitle> {products.name}</CardTitle>
+                    <ButtonCardHome value={products.name} onClick={()=> nameToBook(products)} >Book Now</ButtonCardHome>
                 </div>
-                <span>Prices starting at <br/><b>$ {product.priceday + product.priceflight}</b></span>
+                <span>Prices starting at <br/><b>$ {products.priceday + products.priceflight}</b></span>
             </CardContent>
-        </CardArea>
-    )
+    </CardArea>
+       )
 }

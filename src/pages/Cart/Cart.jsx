@@ -1,16 +1,16 @@
 import { CartCard } from "../../components/CartCard/CartCard";
-import { CartContainer, CartTitleMain, ButtonCart, ButtonCart2, CartTotalDivMain, ButtonMain, CardContainerCart, TotalPriceCartMain, CartTitleDiv } from "./styles";
+import { CartContainer, CartTitleMain, ButtonCart, ButtonCart2, CartTotalDivMain, ButtonMain, CardContainerCart, TotalPriceCartMain, EmptyText, CartTitleDiv } from "./styles";
 import { CartSideBar } from '../../components/CartSidebar/CartSideBar'
 
-export function Cart({cartProduct}){
-    
+export function Cart({productCart}){
+
     return(
         <>
         <CartContainer>
            <CartTitleMain>Shopping Cart</CartTitleMain>
             <CardContainerCart>
-              <p className="empty"cartProduct={cartProduct}>Your shopping cart is empty</p>
-          <CartCard cartProduct={cartProduct}/>
+              <EmptyText productCart={productCart}> Your shopping cart is empty</EmptyText>
+          <CartCard productCart={productCart}/>
           </CardContainerCart>
           <CartTotalDivMain>
             <TotalPriceCartMain> Total</TotalPriceCartMain>
