@@ -101,7 +101,7 @@ export function Catalogue(props) {
                         let listOfProducts = []
                         listOfProducts.push(product)
                         return(
-                    <Card nameToBook={nameToBook} products={listOfProducts}/>)})}
+                    <Card nameToBook={nameToBook} key={product.id} products={listOfProducts}/>)})}
                 </CardContainerCatalogue>
             </CatalogueContainer>
         </>
