@@ -1,16 +1,16 @@
 import { FiltroHomeContainer, FiltroCatalogueContainer, StyledInputDestination, StyledInputPerson, StyledInput, StyledSearchButton, CatalogueStyledInputDestination, CatalogueStyledInputPerson, CatalogueStyledInput, CatalogueStyledSearchButton } from './styles'
-import { useState } from 'react'
-import { checkDates } from '../../utils/RoutesFunctions'
+import { sendInfoToBookTrip } from '../../utils/RoutesFunctions'
 
 
 export function FilterHome(props){
     const {
       products,
+      productCart,
+      setProductCart,
       dateDeparture,
       dateReturn,
       setDateReturn,
-      date,
-      setDate,
+      setPageRoute,
       alert,
       setAlert,
       setDateDeparture,
@@ -36,10 +36,10 @@ export function FilterHome(props){
            })}
            </StyledInputDestination>
             <StyledInput id="DepartureDate" type="date" onChange={(e)=>{if(alert){setAlert("")};setDateDeparture(e.target.value)}}/>
-            <StyledInputPerson id="Passengers" placeholder='Nº of Passengers' type="number" onChange={(e)=>{ setPerson(e.target.value)}} />
+            <StyledInputPerson id="Passengers" placeholder='Nº of Passengers' type="number" onChange={(e)=>{setPerson(e.target.value)}} />
             <StyledInput id="ReturnDate" type="date" onChange={(e)=>{if(alert){setAlert("")};setDateReturn(e.target.value)}}/> <br/>
             <p className="alert">{alert}</p>
-        <StyledSearchButton onClick={()=>{checkDates(dateDeparture,dateReturn,setAlert)}}>SEARCH</StyledSearchButton>
+        <StyledSearchButton onClick={()=>{sendInfoToBookTrip(products, setPageRoute, setProductCart, dateDeparture, dateReturn, setAlert, person, filterBookDestination)}}>SEARCH</StyledSearchButton>
     </FiltroHomeContainer>
  
 
@@ -48,11 +48,12 @@ export function FilterHome(props){
     export function FilterCatalogue(props){
         const {
           products,
+          productCart,
+          setProductCart,
           dateDeparture,
           dateReturn,
           setDateReturn,
-          date,
-          setDate,
+          setPageRoute,
           alert,
           setAlert,
           filterBookDestination,
@@ -82,7 +83,7 @@ export function FilterHome(props){
                     <CatalogueStyledInput id="DepartureDate" type="date" onChange={(e)=>{ setDateDeparture(e.target.value)}} />
                     <CatalogueStyledInput id="ReturnDate" type="date" onChange={(e)=>{ setDateReturn(e.target.value)}}/>         
                     <p className="alert">{alert}</p>
-                    <CatalogueStyledSearchButton onClick={()=>{checkDates(dateDeparture,dateReturn,setAlert)}}>SEARCH</CatalogueStyledSearchButton>
+                    <CatalogueStyledSearchButton onClick={()=>{sendInfoToBookTrip(products, setPageRoute, setProductCart, dateDeparture, dateReturn, setAlert, person, filterBookDestination)}}>search</CatalogueStyledSearchButton>
             </FiltroCatalogueContainer>
             </>
         

@@ -28,7 +28,7 @@ export const Ticket = styled.div`
     flex-direction: row;
     width: 75vw;
     min-height: 52vh;
-    background-color: var(--white-card);
+    background-color: ${(props)=> props.productCart.length? "var(--white-card)" : "#cecece" };
     border-radius: 2.5rem;
     overflow: hidden;
     box-shadow: rgba(149, 157, 165, 0.1) 0px 6px 20px;
@@ -36,6 +36,7 @@ export const Ticket = styled.div`
 
 export const PinkLine= styled.div`
     width: 8%;
+    min-height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,6 +69,13 @@ export const TicketContent = styled.div`
         align-items: flex-start;
         justify-content: flex-end;
     }
+    .emptyAlert{
+        margin: auto;
+        margin-left: 9rem;
+        color: #5e5e5e;
+        width: 100%;
+        text-align: center;        
+    }
 `
 
 export const TicketButton = styled.button`
@@ -81,7 +89,8 @@ export const TicketButton = styled.button`
     border-radius: 1.25rem;
     height: 3.2rem;
     :hover{
-        color: #fc9cbd
+        color: #fc9cbd;
+        cursor:pointer;
     }
     :active{
         color: var(--cute-pink);

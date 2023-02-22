@@ -2,10 +2,7 @@
     {
       "id": "0",
       "name": "Pandora",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":12500,
       "priceday":2500,
@@ -16,10 +13,7 @@
     {
       "id": "1",
       "name": "Scarif",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":16000,
       "priceday":2100,
@@ -31,10 +25,7 @@
         
       "id": "2",
       "name": "Vormir",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":15000,
       "priceday":1000,
@@ -47,10 +38,7 @@
         
       "id": "3",
       "name": "Naboo",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":19000,
       "priceday":1900,
@@ -62,25 +50,19 @@
         
       "id": "4",
       "name": "Oa",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":14000,
       "priceday":1800,
       "amount":0,
-      "media":"DC Comics",
+      "media":"Dc Comics",
       "img":"https://live.staticflickr.com/2806/9915283794_af2e34b7b7_b.jpg"
     },
     {
         
       "id": "5",
       "name": "Arrakis ",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":16000,
       "priceday":825,
@@ -92,10 +74,7 @@
         
       "id": "6",
       "name": "Dathomir",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":15000,
       "priceday":1200,
@@ -107,10 +86,7 @@
         
       "id": "7",
       "name": "Hoth",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":15000,
       "priceday":1800,
@@ -122,10 +98,7 @@
         
       "id": "8",
       "name": "Asgard",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":20000,
       "priceday":2200,
@@ -137,10 +110,7 @@
         
       "id": "9",
       "name": "Tatooine",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":15500,
       "priceday":1850,
@@ -152,10 +122,7 @@
         
       "id": "10",
       "name": "Coruscant",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":14500,
       "priceday":1500,
@@ -167,10 +134,7 @@
         
       "id": "11",
       "name": "LV 426",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":9500,
       "priceday":1350,
@@ -182,10 +146,7 @@
         
       "id": "12",
       "name": "Gallifrey",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":14500,
       "priceday":1350,
@@ -197,10 +158,7 @@
         
       "id": "13",
       "name": "Xandar",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":14000,
       "priceday":1800,
@@ -212,10 +170,7 @@
         
       "id": "14",
       "name": "Sakaar",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":12000,
       "priceday":1150,
@@ -227,10 +182,7 @@
         
       "id": "15",
       "name": "Hala",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":16000,
       "priceday":1500,
@@ -242,10 +194,7 @@
         
       "id": "16",
       "name": "Lamentis-1",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":14000,
       "priceday":950,
@@ -256,10 +205,7 @@
     {
       "id": "17",
       "name": "Ni'var",
-      "dates": [
-        "20/20/2020",
-        "24/20/20"
-      ],
+      "dates": [],
       "description":"Lorem Ipsun",
       "priceflight":12500,
       "priceday":1600,

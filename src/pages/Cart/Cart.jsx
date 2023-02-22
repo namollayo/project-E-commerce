@@ -9,8 +9,8 @@ export function Cart({productCart}){
         <CartContainer>
            <CartTitleMain>Shopping Cart</CartTitleMain>
             <CardContainerCart>
-              <EmptyText productCart={productCart}> Your shopping cart is empty</EmptyText>
-          <CartCard productCart={productCart}/>
+              <EmptyText productCart={productCart[0]}> Your shopping cart is empty</EmptyText>
+          <CartCard productCart={productCart[0]}/>
           </CardContainerCart>
           <CartTotalDivMain>
             <TotalPriceCartMain> Total</TotalPriceCartMain>
