@@ -12,10 +12,9 @@ import { BookTrip } from './pages/BookTrip/BookTrip'
 
 function App() {
   const [pageRoute, setPageRoute] = useState(0)
-  const [productCart, setProductCart] = useState([destinations[0]])
+  const [productCart, setProductCart] = useState([])
   const [dateDeparture,setDateDeparture] = useState()
   const [dateReturn,setDateReturn] = useState()
-  const [date,setDate] = useState()
   const [alert,setAlert] = useState()
   const [person,setPerson] = useState()
   const [filterBookDestination, setFilterBookDestination] = useState()
@@ -24,6 +23,7 @@ function App() {
   const [maxPriceSearch, setMaxPriceSearch] = useState()
   const [universeSearch, setUniverseSearch] = useState()
   const [order, setOrder] = useState()
+
   
 
   const nameToBook = (product) => {
@@ -35,14 +35,14 @@ function App() {
       let page 
         switch (pageRoute) {
           case 0:
-            page = <Homepage className="MainContenteClass"
+            page = <Homepage className="MainContenteClass" 
+            productCart={productCart}
+            setProductCart={setProductCart}
             products={destinations} 
             dateDeparture ={dateDeparture}
             dateReturn={dateReturn}
             setDateDeparture={setDateDeparture}
             setDateReturn={setDateReturn}
-            date={date}
-            setDate={setDate}
             alert={alert}
             setAlert={setAlert}
             person={person}
@@ -50,17 +50,18 @@ function App() {
             filterBookDestination={filterBookDestination}
             setFilterBookDestination={setFilterBookDestination}
             nameToBook={nameToBook}
+            setPageRoute={setPageRoute}
             />
             break
           case 1:
             page = <Catalogue className="MainContenteClass" 
+            productCart={productCart}
+            setProductCart={setProductCart}
             products={destinations} 
             dateDeparture ={dateDeparture}
             dateReturn={dateReturn}
             setDateDeparture={setDateDeparture}
             setDateReturn={setDateReturn}
-            date={date}
-            setDate={setDate}
             alert={alert}
             setAlert={setAlert}
             destinationSearch={destinationSearch}
@@ -78,6 +79,7 @@ function App() {
             setUniverseSearch={setUniverseSearch}
             order={order}
             setOrder={setOrder}
+            setPageRoute={setPageRoute}
             />
             break
           case 2:

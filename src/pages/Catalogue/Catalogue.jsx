@@ -13,6 +13,7 @@ export function Catalogue(props) {
       products,
       dateDeparture,
       productCart,
+      setProductCart,
       dateReturn,
       setDateReturn,
       date,
@@ -33,25 +34,31 @@ export function Catalogue(props) {
       universeSearch,
       setUniverseSearch,
       order, 
-      setOrder
+      setOrder,
+      setPageRoute
     } = props;
 
 
     return(
         <>
             <CatalogueContainer>
-                <FilterCatalogue 
-            products={products} 
-            dateDeparture ={dateDeparture}
-            dateReturn={dateReturn}
-            setDateDeparture={setDateDeparture}
-            setDateReturn={setDateReturn}
-            date={date}
-            setDate={setDate}
-            alert={alert}
-            setAlert={setAlert}
-            filterBookDestination={filterBookDestination}
-            setFilterBookDestination={setFilterBookDestination}/>
+                <FilterCatalogue
+                setPageRoute={setPageRoute}
+                productCart={productCart}
+                setProductCart={setProductCart}
+                products={products} 
+                dateDeparture ={dateDeparture}
+                dateReturn={dateReturn}
+                setDateDeparture={setDateDeparture}
+                setDateReturn={setDateReturn}
+                date={date}
+                setDate={setDate}
+                alert={alert}
+                setAlert={setAlert}
+                person={person}
+                setPerson={setPerson}
+                filterBookDestination={filterBookDestination}
+                setFilterBookDestination={setFilterBookDestination}/>
                 <StyledH2>Destinations</StyledH2>
                 <FilterSortSearch 
                 destinationSearch={destinationSearch}
@@ -101,7 +108,7 @@ export function Catalogue(props) {
                         let listOfProducts = []
                         listOfProducts.push(product)
                         return(
-                    <Card nameToBook={nameToBook} products={listOfProducts}/>)})}
+                    <Card nameToBook={nameToBook} key={product.id} products={listOfProducts}/>)})}
                 </CardContainerCatalogue>
             </CatalogueContainer>
         </>

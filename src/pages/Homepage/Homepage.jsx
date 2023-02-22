@@ -7,13 +7,14 @@ import Snsd from '../../assets/snsd.png'
 
 export function Homepage(props) {
     const {
+      productCart,
+      setProductCart,
       nameToBook,
       products,
       dateDeparture,
       dateReturn,
       setDateReturn,
-      date,
-      setDate,
+      setPageRoute,
       alert,
       setAlert,
       setDateDeparture,
@@ -33,20 +34,22 @@ export function Homepage(props) {
 
         <>
             <BackgroundImage>
-                <FilterHome     
+                <FilterHome    
+            productCart={productCart} 
+            setProductCart={setProductCart}
             products={products} 
             dateDeparture ={dateDeparture}
             dateReturn={dateReturn}
             setDateDeparture={setDateDeparture}
             setDateReturn={setDateReturn}
-            date={date}
-            setDate={setDate}
             alert={alert}
             setAlert={setAlert}
             person={person}
             setPerson={setPerson}
             filterBookDestination={filterBookDestination}
-            setFilterBookDestination={setFilterBookDestination} /> <div className="textHome"><h1>wuju intergalactic tour agency</h1><p>Explore your <br/>favorite universe</p></div>
+            setFilterBookDestination={setFilterBookDestination}
+            setPageRoute={setPageRoute} />
+             <div className="textHome"><h1>wuju intergalactic tour agency</h1><p>Explore your <br/>favorite universe</p></div>
             </BackgroundImage>  
             <HomeInfoContainer>
                 <StyledH2>Most <span>Popular</span> Destinations</StyledH2>
