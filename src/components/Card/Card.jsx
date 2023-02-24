@@ -1,9 +1,9 @@
 import { CardArea, CardImage, CardTitle, ButtonCard, CardContent, CardMainInfo, CardDescription, CardPrice } from './styles'
-// import { nameToBook } from '../../utils/RoutesFunctions'
+import { nameToBook } from '../../utils/utils'
 
 
 export function Card(props){
-    const {products, nameToBook} = props
+    const {products, setFilterBookDestination} = props
     const nights = 1
     return(
         products.length === 0 ? <span> Destination not found </span> :
@@ -18,7 +18,7 @@ export function Card(props){
                     Price per night: $ {product.priceday}</p>             
                     <span>prices from</span>
                 </CardDescription>
-                <ButtonCard  onClick={()=> nameToBook(product)}>Book Now</ButtonCard>
+                <ButtonCard  onClick={()=> nameToBook(product,setFilterBookDestination)}>Book Now</ButtonCard>
             </CardContent>
         </CardArea>
     ))

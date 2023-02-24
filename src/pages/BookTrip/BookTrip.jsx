@@ -1,9 +1,9 @@
 import { AirplaneIcon } from './airplaneIcon';
 import {ContainerBook, Ticket, PinkLine, TicketContent, TicketImage, TicketButton} from './styles'
-import { formatDate } from '../../utils/RoutesFunctions'
+import { formatDate, sendTripToCart } from '../../utils/utils'
 
 
-export function BookTrip({productCart}) {
+export function BookTrip({productCart, setProductCart, inCartProduct , setInCartProduct, setPageRoute}) {
     
     return(<>
     <ContainerBook>
@@ -24,7 +24,7 @@ export function BookTrip({productCart}) {
                 </p>
                 <p>${((productCart[0].priceday * productCart[0].totalDays) + productCart[0].priceflight)*productCart[0].nPerson} <span>Total</span>
                 </p>
-            <div className='buttonTicket'><TicketButton>Reserve</TicketButton></div>
+            <div className='buttonTicket' onClick={()=>{sendTripToCart(productCart, setProductCart, inCartProduct , setInCartProduct, setPageRoute)}}><TicketButton>Reserve</TicketButton></div>
             </div>
             </TicketContent>
         </Ticket>) : (<Ticket productCart={productCart}>
@@ -32,7 +32,7 @@ export function BookTrip({productCart}) {
                 <AirplaneIcon/>
             </PinkLine>
             <TicketContent>
-                <p className="emptyAlert">Please choose your destination from our catalogue</p> 
+                <p className="emptyAlert">Please choose your destination from our <u onClick={()=>{setPageRoute(1)}}>catalogue</u></p> 
             </TicketContent>
             </Ticket>)}
     </ContainerBook>

@@ -2,11 +2,8 @@ import { useState } from 'react'
 import { FilterSortSearchContainer } from './stylesSortSearch'
 
 export function FilterSortSearch(props){
-  const { destinationSearch,
-          setDestinationSearch,
-          minPriceSearch,
+  const { setDestinationSearch,
           setMinPriceSearch,
-          maxPriceSearch,
           setMaxPriceSearch,
           universeSearch,
           setUniverseSearch,
