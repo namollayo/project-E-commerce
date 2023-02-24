@@ -7,9 +7,7 @@ import Snsd from '../../assets/snsd.png'
 
 export function Homepage(props) {
     const {
-      productCart,
       setProductCart,
-      nameToBook,
       products,
       dateDeparture,
       dateReturn,
@@ -35,7 +33,6 @@ export function Homepage(props) {
         <>
             <BackgroundImage>
                 <FilterHome    
-            productCart={productCart} 
             setProductCart={setProductCart}
             products={products} 
             dateDeparture ={dateDeparture}
@@ -54,9 +51,9 @@ export function Homepage(props) {
             <HomeInfoContainer>
                 <StyledH2>Most <span>Popular</span> Destinations</StyledH2>
                 <CardContainerHome>
-                    <CardHome nameToBook={nameToBook} products = {products[(getRandomInt(1,5))-1]}/>
-                    <CardHome nameToBook={nameToBook} products = {products[(getRandomInt(6,12))-1]}/>
-                    <CardHome nameToBook={nameToBook} products = {products[(getRandomInt(13,18))-1]}/>
+                    <CardHome setFilterBookDestination={setFilterBookDestination} products = {products[(getRandomInt(1,5))-1]}/>
+                    <CardHome setFilterBookDestination={setFilterBookDestination} products = {products[(getRandomInt(6,12))-1]}/>
+                    <CardHome setFilterBookDestination={setFilterBookDestination} products = {products[(getRandomInt(13,18))-1]}/>
                 </CardContainerHome>
                 <StyledH2>Who <span>We Are</span></StyledH2>
                 <WhoWeAreText> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</WhoWeAreText>

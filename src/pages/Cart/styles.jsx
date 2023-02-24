@@ -37,7 +37,7 @@ export const CardContainerCart = styled.div`
 `
 
 export const EmptyText = styled.span`
-    opacity: ${(props)=> props.productCart.length? 0 : 1 };
+    opacity: ${(props)=> props.inCartProduct.length? 0 : 1 };
 `
 
 export const CartTitleMain = styled.h2`

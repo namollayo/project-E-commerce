@@ -76,6 +76,21 @@ export const TicketContent = styled.div`
         width: 100%;
         text-align: center;        
     }
+    .emptyAlert > u {
+        color: #fc71a2;
+        text-decoration: none;
+        :hover{
+            color: #fc9cbd;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        :active{
+            color: #f886ae;
+            text-decoration: none;
+        }
+    }
+
+    
 `
 
 export const TicketButton = styled.button`

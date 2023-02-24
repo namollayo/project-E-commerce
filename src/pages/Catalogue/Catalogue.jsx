@@ -9,10 +9,8 @@ import { FilterSortSearch } from '../../components/Filter/FilterSortSearch'
 
 export function Catalogue(props) {
     const {
-      nameToBook,
       products,
       dateDeparture,
-      productCart,
       setProductCart,
       dateReturn,
       setDateReturn,
@@ -44,7 +42,6 @@ export function Catalogue(props) {
             <CatalogueContainer>
                 <FilterCatalogue
                 setPageRoute={setPageRoute}
-                productCart={productCart}
                 setProductCart={setProductCart}
                 products={products} 
                 dateDeparture ={dateDeparture}
@@ -60,12 +57,9 @@ export function Catalogue(props) {
                 filterBookDestination={filterBookDestination}
                 setFilterBookDestination={setFilterBookDestination}/>
                 <StyledH2>Destinations</StyledH2>
-                <FilterSortSearch 
-                destinationSearch={destinationSearch}
+                <FilterSortSearch
                 setDestinationSearch={setDestinationSearch}
-                minPriceSearch={minPriceSearch}
                 setMinPriceSearch={setMinPriceSearch}
-                maxPriceSearch={maxPriceSearch}
                 setMaxPriceSearch={setMaxPriceSearch}
                 universeSearch={universeSearch}
                 setUniverseSearch={setUniverseSearch}
@@ -108,7 +102,7 @@ export function Catalogue(props) {
                         let listOfProducts = []
                         listOfProducts.push(product)
                         return(
-                    <Card nameToBook={nameToBook} key={product.id} products={listOfProducts}/>)})}
+                    <Card setFilterBookDestination={setFilterBookDestination} key={product.id} products={listOfProducts}/>)})}
                 </CardContainerCatalogue>
             </CatalogueContainer>
         </>
