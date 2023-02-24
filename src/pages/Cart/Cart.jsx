@@ -1,10 +1,9 @@
 import { CartCard } from "../../components/CartCard/CartCard";
-import { CartContainer, CartTitleMain, ButtonCart, ButtonCart2, CartTotalDivMain, ButtonMain, CardContainerCart, TotalPriceCartMain, EmptyText, CartTitleDiv } from "./styles";
-import { CartSideBar } from '../../components/CartSidebar/CartSideBar'
+import { CartContainer, CartTitleMain, ButtonCart, ButtonCart2, CartTotalDivMain, ButtonMain, CardContainerCart, TotalPriceCartMain, EmptyText } from "./styles";
 
 export function Cart({inCartProduct, setInCartProduct,setPageRoute}){
 
-  const totalPrice = inCartProduct.reduce((prevVal, inCartProduct)=> prevVal + (inCartProduct.amount*inCartProduct.nPerson*((inCartProduct.totalDays*inCartProduct.priceday)+inCartProduct.priceflight)), 0 )
+  const totalPrice = inCartProduct.length? inCartProduct.reduce((prevVal, inCartProduct)=> prevVal + (inCartProduct.amount*inCartProduct.nPerson*((inCartProduct.totalDays*inCartProduct.priceday)+inCartProduct.priceflight)), 0 ) : 0
     
   return(
         <>
