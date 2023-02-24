@@ -1,4 +1,4 @@
-import { AirplaneIcon } from './airplaneIcon';
+import { AirplaneIcon } from './AirplaneIcon';
 import {ContainerBook, Ticket, PinkLine, TicketContent, TicketImage, TicketButton} from './styles'
 import { formatDate, sendTripToCart } from '../../utils/utils'
 
