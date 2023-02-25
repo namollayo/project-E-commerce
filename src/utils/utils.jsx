@@ -113,7 +113,7 @@ export const saveToLocalStorage = (inCartProduct) =>{
 export const accessTripItemToCart = (inCartProduct, setInCartProduct) => {
     const ArrayOfTripsString = localStorage.getItem("tripItem")
     const ArrayOfTrips =  JSON.parse(ArrayOfTripsString)
-    if(inCartProduct) {
+    if(inCartProduct && ArrayOfTrips !== null) {
         setInCartProduct(ArrayOfTrips)
     }
 }
@@ -123,7 +123,6 @@ export const accessTripItemToCart = (inCartProduct, setInCartProduct) => {
 export const removePerson = (cartProduct, inCartProduct, setInCartProduct) => {
     if(cartProduct.nPerson > 1) {
         const sum = cartProduct.nPerson - 1 
-        console.log(sum);
         cartProduct.nPerson = sum 
         let CartAtt = [...inCartProduct]
         setInCartProduct(CartAtt)        
@@ -133,7 +132,6 @@ export const removePerson = (cartProduct, inCartProduct, setInCartProduct) => {
 }
 export const addPerson = (cartProduct, inCartProduct, setInCartProduct) => {
     if(cartProduct.nPerson < 100) {const sum = cartProduct.nPerson + 1 
-    console.log(sum);
     cartProduct.nPerson = sum 
     let CartAtt = [...inCartProduct]
     setInCartProduct(CartAtt)}
