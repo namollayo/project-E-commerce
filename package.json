@@ -19,5 +19,8 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
     "vite": "^4.1.0"
+  },
+  "overrides": {
+    "rollup": "2.74.1"
   }
 }
