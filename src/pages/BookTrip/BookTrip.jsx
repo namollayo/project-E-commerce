@@ -7,7 +7,7 @@ export function BookTrip({productCart, setProductCart, inCartProduct , setInCart
     
     return(<>
     <ContainerBook>
-    {productCart.length? (<Ticket productCart={productCart}>
+    {productCart.length? (<Ticket productCart={productCart.length}>
             <PinkLine>
                 <AirplaneIcon/>
             </PinkLine>

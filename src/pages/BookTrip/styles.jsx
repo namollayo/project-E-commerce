@@ -28,7 +28,7 @@ export const Ticket = styled.div`
     flex-direction: row;
     width: 75vw;
     min-height: 52vh;
-    background-color: ${(props)=> props.productCart.length? "var(--white-card)" : "#cecece" };
+    background-color: ${(props)=> props.productCart? "var(--white-card)" : "#cecece" };
     border-radius: 2.5rem;
     overflow: hidden;
     box-shadow: rgba(149, 157, 165, 0.1) 0px 6px 20px;

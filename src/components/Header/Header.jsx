@@ -18,7 +18,7 @@ export function Header({logo, setPageRoute, productCart}){
                 <NavOptions onClick={()=>{changeRouteBook(setPageRoute)}}> book trip </NavOptions>   
                 <CartIcon onClick={()=>{changeRouteCart(setPageRoute)}} >
                     <Icon />
-                    <SpanCart productCart={productCart}> {productCart? productCart.reduce((prevVal, product)=> prevVal + product.amount, 0) : 0} </SpanCart>
+                    <SpanCart productCart={productCart.length}> {productCart? productCart.reduce((prevVal, product)=> prevVal + product.amount, 0) : 0} </SpanCart>
                 </CartIcon>
             
             
