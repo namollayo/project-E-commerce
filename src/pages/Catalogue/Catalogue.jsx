@@ -3,7 +3,6 @@ import { CardContainerCatalogue, StyledH2 } from '../Homepage/styles'
 import { Card } from '../../components/Card/Card'
 import { FilterCatalogue } from '../../components/Filter/filter'
 import { CatalogueContainer } from './styles'
-import { Cart } from '../Cart/Cart'
 import { FilterSortSearch } from '../../components/Filter/FilterSortSearch'
 
 

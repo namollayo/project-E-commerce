@@ -28,13 +28,14 @@ function App() {
 
   useEffect(()=> {
     accessTripItemToCart(inCartProduct, setInCartProduct)
-},[])
+  }, [])
 
 useEffect(() => {
-  if(inCartProduct.length > 0){
-  const inCartProductString = JSON.stringify(inCartProduct)
-  localStorage.setItem('tripItem', inCartProductString)} } ,
-  [inCartProduct]
+  if(inCartProduct.length > 0) {
+    const inCartProductString = JSON.stringify(inCartProduct)
+    localStorage.setItem('tripItem', inCartProductString)}
+    
+  }, [inCartProduct]
 );
 
     const renderScreen = () => {

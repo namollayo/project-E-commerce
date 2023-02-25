@@ -64,6 +64,10 @@ export const StyledInputPerson = styled.input`
     font-family: Inter, sans-serif;
     font-size: 12px;
     padding-left: 0.5rem;
+    ::-webkit-inner-spin-button { 
+        -webkit-appearance: none;
+    }
+
     :focus{
         outline:none;
     }
@@ -158,6 +162,10 @@ export const CatalogueStyledInputPerson = styled.input`
     margin-right: auto;
     :focus{
         outline:none;
+    }
+
+    ::-webkit-inner-spin-button { 
+        -webkit-appearance: none;
     }
 
 `

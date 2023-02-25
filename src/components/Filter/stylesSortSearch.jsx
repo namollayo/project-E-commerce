@@ -12,6 +12,10 @@ export const FilterSortSearchContainer = styled.div`
     border-radius: 0.5rem ;
     padding: 0.5rem;
 
+    input[type=number]::-webkit-inner-spin-button { 
+        -webkit-appearance: none;
+    }
+
     input, select, button {
         text-align: center;
         color: #8f8e8e;
@@ -28,13 +32,13 @@ export const FilterSortSearchContainer = styled.div`
 
     button {
         color: var(--cute-pink);
-        background-color: rgba(194, 194, 194, 0.01);
+        background-color: transparent;
         :hover{cursor:pointer}
     }
     
     input,select {
                 background-color: var(--white-card);
-            }
+    }
 
     select{
         padding: 0 1rem;

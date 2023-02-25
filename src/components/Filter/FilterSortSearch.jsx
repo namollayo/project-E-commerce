@@ -49,7 +49,7 @@ export function FilterSortSearch(props){
             <option value="Star Wars">
              Star Wars </option>
             </select>
-            <button onClick={cleanSearchAndOrder}> X </button>
+            <button onClick={cleanSearchAndOrder}><strong> X </strong></button>
         </FilterSortSearchContainer>
     </>
     )

@@ -102,17 +102,18 @@ export const sendTripToCart = (productCart, setProductCart, inCartProduct , setI
        setInCartProduct([...inCartProduct, addToCart])
        setProductCart([]);
        setPageRoute(2)
-       saveToLocalStorage([...inCartProduct, addToCart]) }
+       saveToLocalStorage([...inCartProduct, addToCart]) 
+}
 
 
-export const saveToLocalStorage = (inCartProduct) =>{
+export const saveToLocalStorage = (inCartProduct) => {
     const tripItem = JSON.stringify(inCartProduct)
     localStorage.setItem('tripItem', tripItem)
 }
 
 export const accessTripItemToCart = (inCartProduct, setInCartProduct) => {
     const ArrayOfTripsString = localStorage.getItem("tripItem")
-    const ArrayOfTrips =  JSON.parse(ArrayOfTripsString)
+    const ArrayOfTrips = JSON.parse(ArrayOfTripsString)
     if(inCartProduct && ArrayOfTrips !== null) {
         setInCartProduct(ArrayOfTrips)
     }
